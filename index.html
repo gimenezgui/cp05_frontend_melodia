@@ -519,11 +519,7 @@
                                         Luna Waves
                                     </p>
                                 </div>
-                                <button class="text-gray-400
-                                           hover:text-purple-400
-                                           text-xl transition" aria-label="Adicionar aos favoritos">
-                                    <i class="fa-regular fa-heart"></i>
-                                </button>
+
                             </div>
                             <!-- Progresso -->
                             <div class="mb-7">
@@ -545,12 +541,17 @@
                             <!-- Controles -->
                             <div class="flex items-center
                                        justify-center gap-9">
+
                                 <button class="text-gray-300
                                            hover:text-white
                                            transition" aria-label="Música anterior">
                                     <i class="fa-solid fa-backward-step text-xl"></i>
                                 </button>
-                                <button class="bg-purple-600
+
+                                <audio id="audio-player" src="assets/audio/audio.mp3"></audio>
+
+
+                                <button id = "play-button" type = "button" class="bg-purple-600
                                            hover:bg-purple-500
                                            w-14 h-14
                                            rounded-full

@@ -61,3 +61,30 @@ mobileLinks.forEach((link) => {
         mobileMenu.classList.add("hidden");
     });
 });
+
+const audioPlayer = document.getElementById("audio-player");
+const playButton = document.getElementById("play-button");
+const playIcon = playButton.querySelector("i");
+
+playButton.addEventListener("click", async () => {
+    if (audioPlayer.paused) {
+        try {
+            await audioPlayer.play();
+        } catch (error) {
+            alert("Não foi possível reproduzir o áudio. Verifique o arquivo da música.");
+            return;
+        }
+    } else {
+        audioPlayer.pause();
+    }
+});
+
+audioPlayer.addEventListener("play", () => {
+    playIcon.className = "fa-solid fa-pause";
+    playButton.setAttribute("aria-label", "Pausar");
+});
+
+audioPlayer.addEventListener("pause", () => {
+    playIcon.className = "fa-solid fa-play ml-1";
+    playButton.setAttribute("aria-label", "Reproduzir");
+});
