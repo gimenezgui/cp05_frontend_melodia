@@ -25,7 +25,7 @@ A página apresenta os benefícios e as funcionalidades do aplicativo, depoiment
 
 ## Como visualizar
 
-Acesse a página publicada: 
+Acesse a página publicada: https://gimenezgui.github.io/cp05_frontend_melodia/
 
 Para abrir localmente, baixe o repositório e abra o arquivo `index.html` no navegador. Mantenha as pastas `assets/images` e `js` junto do arquivo HTML.
 
