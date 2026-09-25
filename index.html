@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ["Poppins", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <title>Melodia | Sua Música, Sua Forma</title>
+</head>
+
+<body class="bg-gray-950 text-white font-poppins">
+    <!-- ================= NAVBAR ================= -->
+    <header id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+        <nav id="nav-container" class="max-w-7xl mx-auto px-4 sm:px-6 py-5 transition-all duration-300">
+            <div id="nav-content" class="bg-transparent
+                border border-transparent
+                rounded-2xl px-5 md:px-6 py-3
+                flex items-center justify-between
+                transition-all duration-300">
+                <!-- Logo -->
+                <a href="#inicio" class="flex items-center gap-3">
+                    <div class="w-10 h-10 xl:w-11 xl:h-11
+                               rounded-xl
+                               flex items-center justify-center
+                               shadow-lg shadow-purple-900/30">
+                        <img src="assets/images/logo.png" alt="Logo Melodia"
+                            class="w-10 h-10 xl:w-11 xl:h-11 object-contain">
+                    </div>
+                    <span class="text-xl xl:text-2xl font-bold whitespace-nowrap">
+                        Melodia
+                    </span>
+                </a>
+                <!-- Menu Desktop -->
+                <ul class="hidden lg:flex items-center gap-8 xl:gap-8
+                        text-base xl:text-[17px] font-medium text-gray-100">
+                    <li>
+                        <a href="#inicio" class="hover:text-purple-400 transition">
+                            Início
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#beneficios" class="hover:text-purple-400 transition">
+                            Benefícios
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#funcionalidades" class="hover:text-purple-400 transition">
+                            Funcionalidades
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#depoimentos" class="hover:text-purple-400 transition">
+                            Depoimentos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contato" class="hover:text-purple-400 transition">
+                            Contato
+                        </a>
+                    </li>
+                </ul>
+                <!-- CTA Desktop -->
+                <a href="#contato" class="hidden lg:flex
+                        items-center gap-2
+                        flex-shrink-0
+                        whitespace-nowrap
+                        bg-purple-600
+                        hover:bg-purple-500
+                        px-4 xl:px-5
+                        py-3
+                        rounded-xl
+                        text-base
+                        font-semibold
+                        transition duration-300
+                        shadow-lg shadow-purple-900/20">
+                    Começar agora
+                    <i class="fa-solid fa-arrow-right text-sm"></i>
+                </a>
+                <!-- Botão Mobile -->
+                <button id="menu-button" class="lg:hidden w-10 h-10
+                           flex items-center justify-center
+                           rounded-xl hover:bg-gray-800 transition" aria-label="Abrir menu">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="hidden lg:hidden
+                   mx-4 sm:mx-6
+                   bg-gray-900/95 backdrop-blur-xl
+                   border border-gray-800
+                   rounded-2xl shadow-2xl">
+            <ul class="flex flex-col p-6 gap-5 text-gray-300">
+                <li>
+                    <a class="mobile-link hover:text-purple-400" href="#inicio">
+                        Início
+                    </a>
+                </li>
+                <li>
+                    <a class="mobile-link hover:text-purple-400" href="#beneficios">
+                        Benefícios
+                    </a>
+                </li>
+                <li>
+                    <a class="mobile-link hover:text-purple-400" href="#funcionalidades">
+                        Funcionalidades
+                    </a>
+                </li>
+                <li>
+                    <a class="mobile-link hover:text-purple-400" href="#depoimentos">
+                        Depoimentos
+                    </a>
+                </li>
+                <li>
+                    <a class="mobile-link hover:text-purple-400" href="#contato">
+                        Contato
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <!-- ================= HERO ================= -->
+        <section id="inicio" class="min-h-screen flex items-center
+                   pt-32 pb-20
+                   relative overflow-hidden">
+            <!-- Luzes de fundo -->
+            <div class="absolute top-20 right-0
+                       w-[500px] h-[500px]
+                       bg-purple-600/20
+                       rounded-full blur-3xl
+                       -z-10"></div>
+            <div class="absolute bottom-0 left-0
+                       w-96 h-96
+                       bg-fuchsia-600/10
+                       rounded-full blur-3xl
+                       -z-10"></div>
+            <div class="max-w-7xl mx-auto px-6 w-full">
+                <div class="grid grid-cols-1 lg:grid-cols-2
+                           gap-16 items-center">
+                    <!-- Conteúdo -->
+                    <div>
+                        <!-- Badge -->
+                        <div class="inline-flex items-center gap-2
+                                   border border-purple-500/30
+                                   bg-purple-500/10
+                                   text-purple-300
+                                   px-4 py-2 rounded-full
+                                   text-sm font-medium mb-6">
+                            <i class="fa-solid fa-wave-square"></i>
+                            <span>
+                                Sua música. Seu momento.
+                            </span>
+                        </div>
+                        <!-- Título -->
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl
+                                   font-bold leading-tight mb-6">
+                            Melodia:
+                            <span class="bg-gradient-to-r
+                                       from-purple-400 to-fuchsia-500
+                                       bg-clip-text text-transparent">
+                                Sua Música,
+                                Sua Forma
+                            </span>
+                        </h1>
+                        <!-- Descrição -->
+                        <p class="text-gray-400
+                                   text-base sm:text-lg
+                                   leading-relaxed
+                                   mb-8 max-w-xl">
+                            Descubra novos artistas, crie playlists personalizadas
+                            e aproveite suas músicas favoritas com uma experiência
+                            feita para você.
+                        </p>
+                        <!-- Botões -->
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="#funcionalidades" class="flex items-center justify-center gap-2
+                                       bg-purple-600 hover:bg-purple-500
+                                       px-7 py-3.5 rounded-xl
+                                       font-semibold transition
+                                       shadow-lg shadow-purple-900/30">
+                                Ouvir agora
+                                <i class="fa-solid fa-play text-sm"></i>
+                            </a>
+                            <a href="#beneficios" class="flex items-center justify-center
+                                       border border-gray-700
+                                       hover:border-purple-500
+                                       hover:bg-purple-500/5
+                                       px-7 py-3.5 rounded-xl
+                                       font-semibold transition">
+                                Saiba mais
+                            </a>
+                        </div>
+                        <!-- Informações extras -->
+                        <div class="flex flex-wrap gap-8
+                                   mt-10 pt-8
+                                   border-t border-gray-800">
+                            <div>
+                                <p class="text-xl font-bold">
+                                    +1 milhão
+                                </p>
+                                <p class="text-gray-500 text-sm">
+                                    de músicas
+                                </p>
+                            </div>
+                            <div>
+                                <p class="text-xl font-bold">
+                                    +500 mil
+                                </p>
+                                <p class="text-gray-500 text-sm">
+                                    usuários
+                                </p>
+                            </div>
+                            <div>
+                                <p class="text-xl font-bold">
+                                    4.9/5
+                                </p>
+                                <p class="text-gray-500 text-sm">
+                                    avaliação
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Imagem Hero -->
+                    <div class="relative flex justify-center lg:justify-end">
+                        <!-- Glow -->
+                        <div class="absolute
+                                   w-80 h-80
+                                   bg-purple-600/30
+                                   rounded-full
+                                   blur-3xl"></div>
+                        <!-- Imagem -->
+                        <img src="assets/images/melodia-logo.png" alt="Interface do aplicativo Melodia" class="relative z-10
+                                   w-full max-w-xl
+                                   rounded-3xl
+                                   shadow-2xl shadow-purple-900/30
+                                   hover:scale-[1.02]
+                                   transition duration-500">
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <!-- ================= BENEFÍCIOS ================= -->
+        <section id="beneficios" class="py-24 bg-gray-900/60">
+            <div class="max-w-7xl mx-auto px-6">
+                <!-- Título -->
+                <div class="text-center mb-16">
+                    <p class="text-purple-400
+                               font-semibold mb-3">
+                        Por que escolher o Melodia?
+                    </p>
+                    <h2 class="text-3xl md:text-4xl
+                               font-bold mb-4">
+                        Uma nova forma de viver a música
+                    </h2>
+                    <p class="text-gray-400
+                               max-w-2xl mx-auto
+                               leading-relaxed">
+                        Tudo o que você precisa para descobrir,
+                        organizar e aproveitar suas músicas favoritas
+                        em um só lugar.
+                    </p>
+                </div>
+                <!-- Cards -->
+                <div class="grid grid-cols-1
+                           sm:grid-cols-2
+                           lg:grid-cols-4
+                           gap-6">
+                    <!-- Card -->
+                    <div class="group
+                               bg-gray-950
+                               border border-gray-800
+                               p-7 rounded-2xl
+                               hover:border-purple-500/50
+                               hover:-translate-y-2
+                               transition duration-300">
+                        <div class="w-12 h-12
+                                   bg-purple-500/10
+                                   text-purple-400
+                                   rounded-xl
+                                   flex items-center justify-center
+                                   text-xl mb-6
+                                   group-hover:bg-purple-600
+                                   group-hover:text-white
+                                   transition">
+                            <i class="fa-solid fa-headphones"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3">
+                            Som de alta qualidade
+                        </h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Aproveite suas músicas favoritas com uma
+                            experiência sonora de alta qualidade.
+                        </p>
+                    </div>
+                    <!-- Card -->
+                    <div class="group
+                               bg-gray-950
+                               border border-gray-800
+                               p-7 rounded-2xl
+                               hover:border-purple-500/50
+                               hover:-translate-y-2
+                               transition duration-300">
+                        <div class="w-12 h-12
+                                   bg-purple-500/10
+                                   text-purple-400
+                                   rounded-xl
+                                   flex items-center justify-center
+                                   text-xl mb-6
+                                   group-hover:bg-purple-600
+                                   group-hover:text-white
+                                   transition">
+                            <i class="fa-solid fa-list-ul"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3">
+                            Playlists personalizadas
+                        </h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Crie playlists para cada momento e organize
+                            suas músicas do seu jeito.
+                        </p>
+                    </div>
+                    <!-- Card -->
+                    <div class="group
+                               bg-gray-950
+                               border border-gray-800
+                               p-7 rounded-2xl
+                               hover:border-purple-500/50
+                               hover:-translate-y-2
+                               transition duration-300">
+                        <div class="w-12 h-12
+                                   bg-purple-500/10
+                                   text-purple-400
+                                   rounded-xl
+                                   flex items-center justify-center
+                                   text-xl mb-6
+                                   group-hover:bg-purple-600
+                                   group-hover:text-white
+                                   transition">
+                            <i class="fa-solid fa-music"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3">
+                            Descubra artistas
+                        </h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Conheça novos artistas e encontre músicas
+                            que combinam com seu estilo.
+                        </p>
+                    </div>
+                    <!-- Card -->
+                    <div class="group
+                               bg-gray-950
+                               border border-gray-800
+                               p-7 rounded-2xl
+                               hover:border-purple-500/50
+                               hover:-translate-y-2
+                               transition duration-300">
+                        <div class="w-12 h-12
+                                   bg-purple-500/10
+                                   text-purple-400
+                                   rounded-xl
+                                   flex items-center justify-center
+                                   text-xl mb-6
+                                   group-hover:bg-purple-600
+                                   group-hover:text-white
+                                   transition">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3">
+                            Interface intuitiva
+                        </h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Navegue facilmente pelo aplicativo com uma
+                            experiência simples, moderna e intuitiva.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ================= FUNCIONALIDADES ================= -->
+        <section id="funcionalidades" class="py-24 bg-gray-950">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid grid-cols-1
+                           lg:grid-cols-2
+                           gap-16 items-center">
+                    <!-- Texto -->
+                    <div>
+                        <div class="inline-flex items-center gap-2
+                                   text-purple-400
+                                   font-semibold mb-4">
+                            <i class="fa-solid fa-headphones-simple"></i>
+                            Feito para você
+                        </div>
+                        <h2 class="text-3xl md:text-4xl
+                                   font-bold mb-6">
+                            Tudo que você precisa para
+                            curtir sua música
+                        </h2>
+                        <p class="text-gray-400
+                                   leading-relaxed mb-10">
+                            O Melodia reúne recursos para tornar sua
+                            experiência musical mais simples,
+                            personalizada e divertida.
+                        </p>
+                        <div class="space-y-8">
+                            <!-- Funcionalidade -->
+                            <div class="flex gap-5">
+                                <div class="flex-shrink-0
+                                           w-11 h-11
+                                           bg-purple-500/10
+                                           text-purple-400
+                                           rounded-xl
+                                           flex items-center justify-center">
+                                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold mb-2">
+                                        Recomendações personalizadas
+                                    </h3>
+                                    <p class="text-gray-400 text-sm leading-relaxed">
+                                        Descubra músicas e artistas baseados
+                                        nos seus gostos musicais.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Funcionalidade -->
+                            <div class="flex gap-5">
+                                <div class="flex-shrink-0
+                                           w-11 h-11
+                                           bg-purple-500/10
+                                           text-purple-400
+                                           rounded-xl
+                                           flex items-center justify-center">
+                                    <i class="fa-solid fa-heart"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold mb-2">
+                                        Seus favoritos
+                                    </h3>
+                                    <p class="text-gray-400 text-sm leading-relaxed">
+                                        Salve suas músicas favoritas e encontre
+                                        tudo rapidamente quando quiser ouvir.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Funcionalidade -->
+                            <div class="flex gap-5">
+                                <div class="flex-shrink-0
+                                           w-11 h-11
+                                           bg-purple-500/10
+                                           text-purple-400
+                                           rounded-xl
+                                           flex items-center justify-center">
+                                    <i class="fa-solid fa-shuffle"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold mb-2">
+                                        Modo aleatório
+                                    </h3>
+                                    <p class="text-gray-400 text-sm leading-relaxed">
+                                        Misture suas playlists e descubra
+                                        uma nova experiência a cada reprodução.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Player -->
+                    <div class="flex justify-center lg:justify-end">
+                        <div class="bg-gray-900
+                                   border border-gray-800
+                                   p-5 sm:p-7
+                                   rounded-3xl
+                                   w-full max-w-md
+                                   shadow-2xl">
+                            <!-- Capa -->
+                            <div class="relative
+                                       overflow-hidden
+                                       rounded-2xl
+                                       mb-6 group">
+                                <img src="assets/images/card.png" alt="Capa da música Midnight Dreams" class="w-full
+                                           aspect-square
+                                           object-cover
+                                           group-hover:scale-105
+                                           transition duration-500">
+                                <div class="absolute inset-0
+                                           bg-gradient-to-t
+                                           from-black/40
+                                           via-transparent
+                                           to-transparent"></div>
+                            </div>
+                            <!-- Música -->
+                            <div class="flex items-start justify-between mb-6">
+                                <div>
+                                    <h3 class="text-2xl font-bold">
+                                        Midnight Dreams
+                                    </h3>
+                                    <p class="text-gray-400">
+                                        Luna Waves
+                                    </p>
+                                </div>
+                                <button class="text-gray-400
+                                           hover:text-purple-400
+                                           text-xl transition" aria-label="Adicionar aos favoritos">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+                            <!-- Progresso -->
+                            <div class="mb-7">
+                                <div class="w-full h-1.5
+                                           bg-gray-700
+                                           rounded-full overflow-hidden">
+                                    <div class="w-1/2 h-full
+                                               bg-gradient-to-r
+                                               from-purple-500
+                                               to-fuchsia-500
+                                               rounded-full"></div>
+                                </div>
+                                <div class="flex justify-between
+                                           text-xs text-gray-500 mt-2">
+                                    <span>1:42</span>
+                                    <span>3:24</span>
+                                </div>
+                            </div>
+                            <!-- Controles -->
+                            <div class="flex items-center
+                                       justify-center gap-9">
+                                <button class="text-gray-300
+                                           hover:text-white
+                                           transition" aria-label="Música anterior">
+                                    <i class="fa-solid fa-backward-step text-xl"></i>
+                                </button>
+                                <button class="bg-purple-600
+                                           hover:bg-purple-500
+                                           w-14 h-14
+                                           rounded-full
+                                           flex items-center justify-center
+                                           transition
+                                           shadow-lg shadow-purple-900/40" aria-label="Reproduzir">
+                                    <i class="fa-solid fa-play ml-1"></i>
+                                </button>
+                                <button class="text-gray-300
+                                           hover:text-white
+                                           transition" aria-label="Próxima música">
+                                    <i class="fa-solid fa-forward-step text-xl"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ================= DEPOIMENTOS ================= -->
+        <section id="depoimentos" class="py-24 bg-gray-900/60">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <p class="text-purple-400 font-semibold mb-3">
+                        Quem usa, recomenda
+                    </p>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                        O que nossos usuários estão dizendo
+                    </h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto">
+                        Descubra como o Melodia está transformando
+                        a forma como as pessoas escutam e descobrem
+                        novas músicas.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1
+                           md:grid-cols-2
+                           lg:grid-cols-3
+                           gap-7">
+                    <!-- Depoimento 1 -->
+                    <article class="flex flex-col
+                               bg-gray-950
+                               border border-gray-800
+                               p-7 rounded-2xl
+                               hover:border-purple-500/40
+                               transition">
+                        <div class="text-yellow-400 text-sm mb-5">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <blockquote class="text-gray-300
+                                   leading-relaxed
+                                   flex-grow mb-8">
+                            “O Melodia mudou completamente a forma
+                            como descubro músicas. Sempre encontro
+                            artistas novos que combinam comigo.”
+                        </blockquote>
+                        <div class="flex items-center gap-4">
+                            <img src="assets/images/menina.png" alt="Foto de Mariana Silva" class="w-12 h-12
+                                       rounded-full object-cover
+                                       ring-2 ring-purple-500/30">
+                            <div>
+                                <h3 class="font-semibold">
+                                    Mariana Silva
+                                </h3>
+                                <p class="text-gray-500 text-sm">
+                                    Usuária do Melodia
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Depoimento 2 -->
+                    <article class="flex flex-col
+                               bg-gray-950
+                               border border-gray-800
+                               p-7 rounded-2xl
+                               hover:border-purple-500/40
+                               transition">
+                        <div class="text-yellow-400 text-sm mb-5">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <blockquote class="text-gray-300
+                                   leading-relaxed
+                                   flex-grow mb-8">
+                            “Criar e organizar minhas playlists ficou
+                            muito mais fácil. A interface é simples,
+                            bonita e muito intuitiva.”
+                        </blockquote>
+                        <div class="flex items-center gap-4">
+                            <img src="assets/images/menino.png" alt="Foto de Pedro Almeida" class="w-12 h-12
+                                       rounded-full object-cover
+                                       ring-2 ring-purple-500/30">
+                            <div>
+                                <h3 class="font-semibold">
+                                    Pedro Almeida
+                                </h3>
+                                <p class="text-gray-500 text-sm">
+                                    Usuário do Melodia
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Depoimento 3 -->
+                    <article class="flex flex-col
+                               bg-gray-950
+                               border border-gray-800
+                               p-7 rounded-2xl
+                               hover:border-purple-500/40
+                               transition">
+                        <div class="text-yellow-400 text-sm mb-5">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <blockquote class="text-gray-300
+                                   leading-relaxed
+                                   flex-grow mb-8">
+                            “As recomendações são excelentes.
+                            Já descobri várias músicas que hoje
+                            fazem parte das minhas playlists.”
+                        </blockquote>
+                        <div class="flex items-center gap-4">
+                            <img src="assets/images/menina2.png" alt="Foto de Ana Costa" class="w-12 h-12
+                                       rounded-full object-cover
+                                       ring-2 ring-purple-500/30">
+                            <div>
+                                <h3 class="font-semibold">
+                                    Ana Costa
+                                </h3>
+                                <p class="text-gray-500 text-sm">
+                                    Usuária do Melodia
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- ================= CONTATO ================= -->
+        <section id="contato" class="py-24 bg-gray-950">
+            <div class="max-w-5xl mx-auto px-6">
+                <div class="relative overflow-hidden
+                           bg-gray-900
+                           border border-gray-800
+                           rounded-3xl
+                           p-8 md:p-12">
+                    <!-- Glow -->
+                    <div class="absolute -top-32 -right-32
+                               w-72 h-72
+                               bg-purple-600/20
+                               rounded-full blur-3xl"></div>
+                    <div class="relative z-10">
+                        <div class="text-center mb-10">
+                            <p class="text-purple-400 font-semibold mb-3">
+                                Fique por dentro
+                            </p>
+                            <h2 class="text-3xl md:text-4xl
+                                       font-bold mb-4">
+                                Sua próxima música favorita
+                                está esperando
+                            </h2>
+                            <p class="text-gray-400
+                                       max-w-2xl mx-auto">
+                                Cadastre-se para receber novidades,
+                                lançamentos e recomendações do Melodia.
+                            </p>
+                        </div>
+                        <form id="form-contato" class="max-w-2xl mx-auto">
+                            <div class="grid grid-cols-1
+                                       md:grid-cols-2
+                                       gap-5 mb-5">
+                                <div>
+                                    <label for="nome" class="block text-sm
+                                               font-medium mb-2">
+                                        Nome
+                                    </label>
+                                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required
+                                        class="w-full
+                                               bg-gray-950
+                                               border border-gray-700
+                                               rounded-xl
+                                               px-4 py-3.5
+                                               outline-none
+                                               focus:border-purple-500
+                                               focus:ring-2
+                                               focus:ring-purple-500/10
+                                               transition">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm
+                                               font-medium mb-2">
+                                        E-mail
+                                    </label>
+                                    <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com"
+                                        required class="w-full
+                                               bg-gray-950
+                                               border border-gray-700
+                                               rounded-xl
+                                               px-4 py-3.5
+                                               outline-none
+                                               focus:border-purple-500
+                                               focus:ring-2
+                                               focus:ring-purple-500/10
+                                               transition">
+                                </div>
+                            </div>
+                            <button type="submit" class="w-full
+                                       bg-purple-600
+                                       hover:bg-purple-500
+                                       py-3.5 rounded-xl
+                                       font-semibold
+                                       transition
+                                       shadow-lg shadow-purple-900/20">
+                                Quero receber novidades
+                                <i class="fa-solid fa-arrow-right ml-2"></i>
+                            </button>
+                            <p class="text-gray-500
+                                       text-xs text-center mt-4">
+                                Sem spam. Apenas música e novidades.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-gray-900
+               border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 py-12">
+            <div class="grid grid-cols-1
+                       md:grid-cols-3
+                       gap-10">
+                <!-- Marca -->
+                <div>
+                    <a href="#inicio" class="flex items-center gap-3 mb-5">
+                        <div class="w-10 h-10
+                                   bg-gradient-to-br
+                                   from-purple-500 to-fuchsia-600
+                                   rounded-xl
+                                   flex items-center justify-center">
+                            <i class="fa-solid fa-music"></i>
+                        </div>
+                        <span class="text-xl font-bold">
+                            Melodia
+                        </span>
+                    </a>
+                    <p class="text-gray-400
+                               text-sm leading-relaxed
+                               max-w-xs">
+                        Sua música, sua forma.
+                        Descubra novos sons e viva cada momento.
+                    </p>
+                </div>
+                <!-- Navegação -->
+                <div>
+                    <h3 class="font-semibold mb-5">
+                        Navegação
+                    </h3>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li>
+                            <a href="#inicio" class="hover:text-purple-400 transition">
+                                Início
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#beneficios" class="hover:text-purple-400 transition">
+                                Benefícios
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#funcionalidades" class="hover:text-purple-400 transition">
+                                Funcionalidades
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#depoimentos" class="hover:text-purple-400 transition">
+                                Depoimentos
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contato" class="hover:text-purple-400 transition">
+                                Contato
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Social -->
+                <div>
+                    <h3 class="font-semibold mb-5">
+                        Siga o Melodia
+                    </h3>
+                    <div class="flex gap-3">
+                        <a href="#" aria-label="Instagram" class="w-10 h-10
+                                   bg-gray-800
+                                   hover:bg-purple-600
+                                   rounded-xl
+                                   flex items-center justify-center
+                                   transition">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="TikTok" class="w-10 h-10
+                                   bg-gray-800
+                                   hover:bg-purple-600
+                                   rounded-xl
+                                   flex items-center justify-center
+                                   transition">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                        <a href="#" aria-label="YouTube" class="w-10 h-10
+                                   bg-gray-800
+                                   hover:bg-purple-600
+                                   rounded-xl
+                                   flex items-center justify-center
+                                   transition">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </div>
+                    <a href="#" class="inline-block
+                               text-gray-500
+                               hover:text-purple-400
+                               text-sm mt-5
+                               transition">
+                        Política de Privacidade
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800
+                       mt-10 pt-6
+                       flex flex-col sm:flex-row
+                       justify-between gap-3
+                       text-gray-500 text-xs">
+                <p>
+                    © 2026 Melodia. Todos os direitos reservados.
+                </p>
+                <p>
+                    Desenvolvido para o Checkpoint 05
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
